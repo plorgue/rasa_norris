@@ -54,16 +54,16 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: purpose_jock
+  - intent: purpose_joke
   - action: chucknorris_form
   - active_loop: chucknorris_form
   - slot_was_set:
-    - requested_slot: want_jocks
+    - requested_slot: want_jokes
   - slot_was_set:
-    - requested_slot: jock_category
+    - requested_slot: joke_category
   - slot_was_set:
-    - requested_slot: num_jocks
+    - requested_slot: num_jokes
   - slot_was_set:
     - requested_slot: null
   - active_loop: null
-  - action: action_display_jocks
+  - action: action_display_jokes

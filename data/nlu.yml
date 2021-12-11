@@ -36,6 +36,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - sure
 - intent: deny
   examples: |
     - no
@@ -85,12 +86,12 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-- intent: purpose_jock
+- intent: purpose_joke
   examples: |
     - good
     - fine
     - great
-    - jock
+    - joke
     - fun
     - do something?
     - what can you do?

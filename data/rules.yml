@@ -29,13 +29,13 @@ rules:
   - action: utter_submit
   - action: utter_slots_values
 
-- rule: Activate Chuck Norris jocks form
+- rule: Activate Chuck Norris jokes form
   steps:
-  - intent: purpose_jock
+  - intent: purpose_joke
   - action: chucknorris_form
   - active_loop: chucknorris_form
 
-- rule: Submit Chuck Norris jocks form
+- rule: Submit Chuck Norris jokes form
   condition:
   - active_loop: chucknorris_form
   steps:
@@ -43,4 +43,4 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
-  - action: action_display_jocks
+  - action: action_display_jokes

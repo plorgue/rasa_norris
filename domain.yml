@@ -12,7 +12,7 @@ intents:
 - mood_great
 - mood_unhappy
 - bot_challenge
-- purpose_jock
+- purpose_joke
 
 forms:
   name_form:
@@ -21,9 +21,9 @@ forms:
       - last_name
   chucknorris_form:
     required_slots:
-      - want_jocks
-      - jock_category
-      - num_jocks
+      - want_jokes
+      - joke_category
+      - num_jokes
 
 slots:
   first_name:
@@ -42,23 +42,23 @@ slots:
         conditions:
          - active_loop: name_form
            requested_slot: last_name
-  jock_category:
+  joke_category:
     type: text
     influence_conversation: true
     mappings:
       - type: from_text
         conditions:
          - active_loop: chucknorris_form
-           requested_slot: jock_category
-  num_jocks:
+           requested_slot: joke_category
+  num_jokes:
     type: text
     influence_conversation: true
     mappings:
       - type: from_text
         conditions:
          - active_loop: chucknorris_form
-           requested_slot: num_jocks
-  want_jocks:
+           requested_slot: num_jokes
+  want_jokes:
     type: bool
     influence_conversation: true
     mappings:
@@ -68,7 +68,7 @@ slots:
         not_intent: deny
         conditions:
           - active_loop: chucknorris_form
-            requested_slot: want_jocks
+            requested_slot: want_jokes
   
 
 responses:
@@ -89,15 +89,15 @@ responses:
   - text: What is your first name?
   utter_ask_last_name:
   - text: What is your last name?  
-  utter_ask_want_jocks:
-  - text: Do you want a jock ?
-  utter_ask_num_jocks:
+  utter_ask_want_jokes:
+  - text: Do you want a joke ?
+  utter_ask_num_jokes:
   - text: How many fun facts do you want?
   utter_submit:
   - text: Ok. Thanks!
   utter_slots_values:
   - text: I will remember that your name is {first_name} {last_name}!
-  utter_will_send_jock:
+  utter_will_send_joke:
   - text: 'Great !'
 
 actions:
@@ -106,8 +106,8 @@ actions:
 - utter_submit
 - validate_name_form
 - validate_chucknorris_form
-- utter_slots_values_jock
-- utter_submit_jock
+- utter_slots_values_joke
+- utter_submit_joke
 - action_categories
-- action_display_jocks
-- action_ask_jock_category
+- action_display_jokes
+- action_ask_joke_category
